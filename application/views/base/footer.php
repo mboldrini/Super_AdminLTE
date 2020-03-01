@@ -28,6 +28,8 @@
     <!--algumas customizações visuais no site -->
     <link href="<?php echo base_url();?>assets/css/visual.css" rel="stylesheet" type="text/css" />
 
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/sweetalert.min.js" ></script>
+
     <?php
 	if( isset($scripts) ){
 		foreach( $scripts as $script_name ){

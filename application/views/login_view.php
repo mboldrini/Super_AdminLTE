@@ -13,7 +13,7 @@
            <h2 class="form-signin-heading">Please sign in</h2>
            <?php echo $this->session->flashdata('msg');?>
            <label for="username" class="sr-only">Username</label>
-           <input type="email" name="email" class="form-control" placeholder="Email" required autofocus>
+           <input type="email" name="email" class="form-control" placeholder="Email" required>
            <label for="password" class="sr-only">Password</label>
            <input type="password" name="password" class="form-control" placeholder="Password" required>
            <div class="checkbox">

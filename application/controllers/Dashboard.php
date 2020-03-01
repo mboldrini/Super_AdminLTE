@@ -27,7 +27,8 @@ class Dashboard extends CI_Controller{
               "level" => $user_infos->user_level,
               "name" => $user_infos->user_name,
               "description" => $user_infos->user_description
-            )
+            ),
+            "latest_users" => $this->users_model->get_last_users()
           );
 
           $this->load->view('painel', $data);

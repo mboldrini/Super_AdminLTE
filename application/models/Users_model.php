@@ -21,11 +21,22 @@ class Users_model extends CI_Model{
         }else{
             return NULL;
         }
-	}
+    }
+    
+    public function get_last_users(){
+        $this->db->select("*");
+        $this->db->from("tbl_users");
+        $this->db->limit(8);
+        $this->db->order_by('user_id',"DESC");
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }
+
 	
 	public function get_user_infos($user_id){
 		$this->db
-        ->select("user_name, user_email, user_level, user_description")
+        ->select("user_id, user_name, user_email, user_level, user_description")
         ->from("tbl_users")
         ->where("user_id", $user_id);
 
@@ -70,6 +81,8 @@ class Users_model extends CI_Model{
         $this->db->where($field, $value);
         return $this->db->get()->num_rows() > 0;
     }
+
+
 
 
 
