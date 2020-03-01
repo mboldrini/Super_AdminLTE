@@ -31,3 +31,21 @@
         </section>
         <!-- /.sidebar -->
       </aside>
+
+      <!-- CONTENT -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            <?php echo isset($page_infos["location"]) ? $page_infos["location"] : "" ?>
+            <small><?php echo isset($page_infos["description"]) ? $page_infos["description"] : "" ?></small>
+          </h1>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+              <!-- Main row -->
+              <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-12 ">

@@ -17,10 +17,12 @@ class Dashboard extends CI_Controller{
         $user_id = $this->session->userdata('level');
         $user_infos = $this->users_model->get_user_infos($user_id);
 
-          $dados = array(
-            'title' => 'AdminLTE - Panel',
-            'location' => 'Painel',
-            'description' => " - you're at the panel",
+          $data = array(
+            "page_infos" => array(
+              'title' => 'AdminLTE - Panel',
+              'location' => 'Painel',
+              'description' => " - you're at the panel",
+            ),
             'user_infos' => array(
               "level" => $user_infos->user_level,
               "name" => $user_infos->user_name,
@@ -28,7 +30,7 @@ class Dashboard extends CI_Controller{
             )
           );
 
-          $this->load->view('painel', $dados);
+          $this->load->view('painel', $data);
 
       }else{
           echo "Access Denied";

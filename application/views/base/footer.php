@@ -1,4 +1,13 @@
- <footer class="main-footer">
+</section><!-- /.Left col -->
+
+</div><!-- /.row (main row) -->
+
+</section><!-- /.content -->
+</div><!-- /.content-wrapper -->
+<!-- / CONTENT -->
+
+
+<footer class="main-footer">
         <div class="pull-right hidden-xs">
           <b>Version</b> Beta 1.0
           <!--
@@ -12,7 +21,7 @@
             0.0.3 => tela de perfil de aluno, mas precisa ainda dos botoes funcionando e data padrão brasileiro
           -->
         </div>
-        <strong>Copyright &copy; 2020 <a href="http://github.com/mboldrini">Matheus Boldrini</a>.</strong> MIT License.
+        <strong><a href="http://github.com/mboldrini">Matheus Boldrini</a> - </strong> MIT License.
       </footer>
     </div><!-- ./wrapper -->
 
