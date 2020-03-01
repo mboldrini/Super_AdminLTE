@@ -10,16 +10,6 @@
 <footer class="main-footer">
         <div class="pull-right hidden-xs">
           <b>Version</b> Beta 1.0
-          <!--
-            1 = Estrutural, programação envolvida no sistema
-            2 = Coisas relacionadas a modificações visuais do sistema
-            3 = recursos adicionados, tipo, gera um relatorio X, tem uma nova tela de cadastro, etc
-
-
-            0.0.1 => cadastro de alunos funcionando normalmente
-            0.0.2 => tela onde lista todos os alunos cadastrados - falta os combobox pegando as infos atuais do usuário no banco de dados
-            0.0.3 => tela de perfil de aluno, mas precisa ainda dos botoes funcionando e data padrão brasileiro
-          -->
         </div>
         <strong><a href="http://github.com/mboldrini">Matheus Boldrini</a> - </strong> MIT License.
       </footer>
@@ -37,8 +27,25 @@
 
     <!--algumas customizações visuais no site -->
     <link href="<?php echo base_url();?>assets/css/visual.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="<?php echo base_url();?>assets/js/funcoes.js"></script> 
 
+    <?php
+	if( isset($scripts) ){
+		foreach( $scripts as $script_name ){
+			$href = base_url() . "assets/js/" . $script_name; ?>
+			<script src="<?= $href ?>"></script>
+<?php		
+	}
+} ?>
+
+<?php
+	if( isset($styles) ){
+		foreach( $styles as $styles_name ){
+			$href = base_url() . "assets/css/" . $styles_name; 
+?>
+			<link href="<?= $href ?>" rel="stylesheet">
+<?php		
+		}
+} ?>
 
   </body>
 </html>

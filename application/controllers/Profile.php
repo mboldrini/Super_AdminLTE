@@ -35,7 +35,11 @@ class Profile extends CI_Controller{
               "name" => $user_infos->user_name,
               "description" => $user_infos->user_description
             ),
-            "screen" => "profile"
+            "screen" => "profile",
+            "scripts" => array(
+              'util.js',
+              'profile.js'
+            )
           );
 
           $this->load->view('profile', $data);
